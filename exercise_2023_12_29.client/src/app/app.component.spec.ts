@@ -28,18 +28,18 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should retrieve weather forecasts from the server', () => {
-    const mockForecasts = [
-      { date: '2021-10-01', temperatureC: 20, temperatureF: 68, summary: 'Mild' },
-      { date: '2021-10-02', temperatureC: 25, temperatureF: 77, summary: 'Warm' }
+  it('should retrieve books from the server', () => {
+    const mockBooks = [
+      { dataRetrievalType: 'dataRetrievalType1', isbn: '1', title: 'title1', subtitle: 'subtitle1', authorNames: 'authorNames1', numberOfPages: '1', publishDate: 'publishDate1' },
+      { dataRetrievalType: 'dataRetrievalType2', isbn: '2', title: 'title2', subtitle: 'subtitle2', authorNames: 'authorNames2', numberOfPages: '2', publishDate: 'publishDate2' }
     ];
 
     component.ngOnInit();
 
-    const req = httpMock.expectOne('/weatherforecast');
-    expect(req.request.method).toEqual('GET');
-    req.flush(mockForecasts);
+    const req = httpMock.expectOne('/book');
+    expect(req.request.method).toEqual('POST');
+    req.flush(mockBooks);
 
-    expect(component.forecasts).toEqual(mockForecasts);
+    expect(component.books).toEqual(mockBooks);
   });
 });

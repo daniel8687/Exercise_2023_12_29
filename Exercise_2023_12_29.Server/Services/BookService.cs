@@ -10,7 +10,7 @@ namespace Exercise_2023_12_29.Server.Services
     public class BookService : IBookService
     {
         private const string _cacheKey = "book";
-        private const int _cacheTimeSeconds = 30;
+        private const int _cacheTimeSeconds = 15;
         private readonly IMemoryCache _memoryCache;
         private HttpClient _httpClient;
 
@@ -36,21 +36,25 @@ namespace Exercise_2023_12_29.Server.Services
 
         public IEnumerable<Book> GetBooks(string[] isbnValues)
         {
-            isbnValues = isbnValues.ToList().Distinct().ToArray();
             var books = new List<Book>();
-            var index = 1;
 
             foreach (var isbn in isbnValues)
             {
                 var book = GetBook(isbn);
                 if (book is not null)
                 {
-                    book.RowNumber = index;
-                    books.Add(book);
-                    index++;
+                    books.Add(new Book()
+                    {
+                        DataRetrievalType = book.DataRetrievalType,
+                        ISBN = book.ISBN,
+                        Title = book.Title,
+                        Subtitle = book.Subtitle,
+                        AuthorNames = book.AuthorNames,
+                        NumberOfPages = book.NumberOfPages,
+                        PublishDate = book.PublishDate
+                    });
                 }
             }
-            
             return books;
         }
 

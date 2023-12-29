@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 interface Book {
-  rowNumber: number
   dataRetrievalType: string;
   isbn: string;
   title: string;
