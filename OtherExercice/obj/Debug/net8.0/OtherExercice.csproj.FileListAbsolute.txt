@@ -1,0 +1,15 @@
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\bin\Debug\net8.0\OtherExercice.exe
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\bin\Debug\net8.0\OtherExercice.deps.json
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\bin\Debug\net8.0\OtherExercice.runtimeconfig.json
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\bin\Debug\net8.0\OtherExercice.dll
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\bin\Debug\net8.0\OtherExercice.pdb
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\OtherExercice.GeneratedMSBuildEditorConfig.editorconfig
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\OtherExercice.AssemblyInfoInputs.cache
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\OtherExercice.AssemblyInfo.cs
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\OtherExercice.csproj.CoreCompileInputs.cache
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\OtherExercice.sourcelink.json
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\OtherExercice.dll
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\refint\OtherExercice.dll
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\OtherExercice.pdb
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\OtherExercice.genruntimeconfig.cache
+C:\OtherWorks\Exercise_2023_12_29\OtherExercice\obj\Debug\net8.0\ref\OtherExercice.dll

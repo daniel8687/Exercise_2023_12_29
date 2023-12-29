@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Exercise_2023_12_29.Server.props" />
+</Project>

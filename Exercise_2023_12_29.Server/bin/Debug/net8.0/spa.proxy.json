@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:4200",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\OtherWorks\\Exercise_2023_12_29\\Exercise_2023_12_29.Server\\..\\exercise_2023_12_29.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
