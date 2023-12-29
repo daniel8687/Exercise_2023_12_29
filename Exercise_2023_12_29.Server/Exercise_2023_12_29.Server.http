@@ -3,4 +3,7 @@
 GET {{Exercise_2023_12_29.Server_HostAddress}}/weatherforecast/
 Accept: application/json
 
+POST {{Exercise_2023_12_29.Server_HostAddress}}/book/
+Accept: application/json
+
 ###

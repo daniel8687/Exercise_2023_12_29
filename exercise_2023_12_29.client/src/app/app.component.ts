@@ -1,11 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+interface Book {
+  rowNumber: number
+  dataRetrievalType: string;
+  isbn: string;
+  title: string;
+  subtitle: string;
+  authorNames: string;
+  numberOfPages: string;
+  publishDate: string;
 }
 
 @Component({
@@ -14,18 +18,43 @@ interface WeatherForecast {
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
+  public books: Book[] = [];
+  public isValidFile: boolean = false;
+  private file: File = {} as File;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.getForecasts();
+  }
+  
+  validateFile(eventFile: any) {
+    var files = eventFile.target.files;
+    if (files.length == 1 && files[0].name.endsWith(".txt")) {
+      this.file = files[0];
+      this.isValidFile = true;
+    }
+    else {
+      this.isValidFile = false;
+      this.books = [];
+    }
   }
 
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
+  getBooksData() {
+    this.books = [];
+    let fileReader = new FileReader();
+    let stringValue: string;
+    fileReader.onload = (e) => {
+      stringValue = (fileReader.result as string).replace(/(?:\r\n|\r|\n)/g, ',');
+      this.getBooksDataApi(stringValue);
+    }
+    fileReader.readAsText(this.file);
+  }
+
+  getBooksDataApi(stringValue: string) {
+    const body = stringValue.split(',');
+    this.http.post<Book[]>('/book', body).subscribe(
       (result) => {
-        this.forecasts = result;
+        this.books = result;
       },
       (error) => {
         console.error(error);
@@ -33,5 +62,5 @@ export class AppComponent implements OnInit {
     );
   }
 
-  title = 'exercise_2023_12_29.client';
+  title = 'Books';
 }

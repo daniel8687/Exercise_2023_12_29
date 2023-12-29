@@ -1,4 +1,7 @@
 
+using Exercise_2023_12_29.Server.Models.Interfaces;
+using Exercise_2023_12_29.Server.Services;
+
 namespace Exercise_2023_12_29.Server
 {
     public class Program
@@ -13,6 +16,8 @@ namespace Exercise_2023_12_29.Server
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IBookService, BookService>();
+            builder.Services.AddMemoryCache();
 
             var app = builder.Build();
 

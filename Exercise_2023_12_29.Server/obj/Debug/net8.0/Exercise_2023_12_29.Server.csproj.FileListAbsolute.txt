@@ -34,3 +34,4 @@ C:\OtherWorks\Exercise_2023_12_29\Exercise_2023_12_29.Server\obj\Debug\net8.0\re
 C:\OtherWorks\Exercise_2023_12_29\Exercise_2023_12_29.Server\obj\Debug\net8.0\Exercise_2023_12_29.Server.pdb
 C:\OtherWorks\Exercise_2023_12_29\Exercise_2023_12_29.Server\obj\Debug\net8.0\Exercise_2023_12_29.Server.genruntimeconfig.cache
 C:\OtherWorks\Exercise_2023_12_29\Exercise_2023_12_29.Server\obj\Debug\net8.0\ref\Exercise_2023_12_29.Server.dll
+C:\OtherWorks\Exercise_2023_12_29\Exercise_2023_12_29.Server\bin\Debug\net8.0\Newtonsoft.Json.dll

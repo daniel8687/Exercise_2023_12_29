@@ -1,3 +1,4 @@
+using Exercise_2023_12_29.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exercise_2023_12_29.Server.Controllers

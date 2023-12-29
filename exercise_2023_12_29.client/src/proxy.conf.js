@@ -5,6 +5,13 @@ const PROXY_CONFIG = [
     ],
     target: "https://localhost:7279",
     secure: false
+  },
+  {
+    context: [
+      "/book",
+    ],
+    target: "https://localhost:7279",
+    secure: false
   }
 ]
 

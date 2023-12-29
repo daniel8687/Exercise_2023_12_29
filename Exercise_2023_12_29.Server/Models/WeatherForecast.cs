@@ -1,4 +1,4 @@
-namespace Exercise_2023_12_29.Server
+namespace Exercise_2023_12_29.Server.Models
 {
     public class WeatherForecast
     {
